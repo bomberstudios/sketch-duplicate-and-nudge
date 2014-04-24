@@ -1,0 +1,16 @@
+// Duplicate and Nudge Left (alt ←)
+(function() {
+  for(var i=0; i < [selection length]; i++){
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 1)]
+
+    if (i==0) {
+      [copy select:true byExpandingSelection:false]
+    } else {
+      [copy select:true byExpandingSelection:true]
+    }
+  }
+}())

@@ -1,0 +1,16 @@
+// Duplicate and Nudge Down (alt shift ↓)
+(function() {
+  for(var i=0; i < [selection length]; i++){
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setY:([frame y] + 10)]
+
+    if (i==0) {
+      [copy select:true byExpandingSelection:false]
+    } else {
+      [copy select:true byExpandingSelection:true]
+    }
+  }
+}())
