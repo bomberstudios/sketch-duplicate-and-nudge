@@ -5,7 +5,7 @@
     var copy = s.duplicate()
     var frame = copy.frame()
 
-    frame.y += 1
+    frame.y = frame.y() + 1
 
     if (i==0) {
       copy.select_byExpandingSelection(true, false)

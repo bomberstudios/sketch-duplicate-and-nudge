@@ -5,7 +5,7 @@
     var copy = s.duplicate()
     var frame = copy.frame()
 
-    frame.x += 10
+    frame.x = frame.x() + 10
 
     if (i==0) {
       copy.select_byExpandingSelection(true, false)
