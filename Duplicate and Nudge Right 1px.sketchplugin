@@ -1,16 +1,16 @@
 // Duplicate and Nudge Right (alt →)
 (function() {
-  for(var i=0; i < [selection length]; i++){
-    var s = selection[i]
-    var copy = [s duplicate]
-    var frame = [copy frame]
+  for(var i=0; i < context.selection.count(); i++){
+    var s = context.selection[i]
+    var copy = s.duplicate()
+    var frame = copy.frame()
 
-    [frame setX:([frame x] + 1)]
+    frame.x += 1
 
     if (i==0) {
-      [copy select:true byExpandingSelection:false]
+      copy.select_byExpandingSelection(true, false)
     } else {
-      [copy select:true byExpandingSelection:true]
+      copy.select_byExpandingSelection(true, true)
     }
   }
 }())
